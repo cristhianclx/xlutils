@@ -19,3 +19,12 @@ def copy(wb):
         w
         )
     return w.output[0][1]
+
+# To copy with format
+def copyWithFormat(wb):
+    w = XLWTWriter()
+    process(
+        XLRDReader(wb,'unknown.xls'),
+        w
+        )
+    return w.output[0][1], w.style_list
